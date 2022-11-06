@@ -1,0 +1,17 @@
+package Ex;
+
+
+class Parent {
+	String name = "심학규";
+	
+	void print() {
+		System.out.println("나는 심청의 아버지인 심학규이다.");
+	}
+}
+
+class Child {
+	String name = "심청";
+}
+public class Ex01 {
+
+}

@@ -1,0 +1,31 @@
+package Ex;
+
+class Vehicle {
+	
+	String color;
+	int speed;
+	
+	public Vehicle(String c, int s) {
+		color = c;
+		speed = s;
+	}
+	
+	void show() {
+		
+	}
+}
+
+class Car extends Vehicle {
+	int displacement;
+	int gears;
+	
+	public Car(String c, int s, int d, int g) {
+		super(c, s);
+		dispalcement = d;
+		gears = g;
+	}
+}
+
+public class Ex03 {
+
+}

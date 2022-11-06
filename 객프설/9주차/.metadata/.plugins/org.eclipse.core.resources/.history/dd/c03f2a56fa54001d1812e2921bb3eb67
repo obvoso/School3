@@ -1,0 +1,24 @@
+package Ex;
+
+class Circle {
+	protected int radius;
+	
+	public Circle(int r) {
+		radius = r;
+	}
+}
+
+
+public class Pizza extends Circle {
+	
+	String name;
+	
+	public Pizza(String name, int r) {
+		
+	}
+	
+	public static void main(String args[]) {
+		
+	}
+
+}

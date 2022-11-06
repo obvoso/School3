@@ -1,0 +1,25 @@
+package Succession;
+
+class Shape2{
+	public void draw() {
+		System.out.println("Shape 중의 하나를 그릴 예정입니다.");
+	}
+}
+
+class Circle2 extends Shape2 {
+	
+	@Override
+	public void draw() {
+		super.draw();
+		System.out.println("circle을 그립니다.");
+	}
+	
+}
+
+public class ShapeTest {
+	public static void main(String[] args) {
+		Circle2 c = new Circle2();
+		c.draw();
+	}
+
+}

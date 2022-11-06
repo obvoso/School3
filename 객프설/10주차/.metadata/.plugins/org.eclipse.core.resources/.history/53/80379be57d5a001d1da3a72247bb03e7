@@ -1,0 +1,29 @@
+package Ex;
+
+class Phone {
+	protected String owner;
+	
+	Phone(String o) {
+		this.owner = o;
+	}
+	void talk() {
+		
+	}
+}
+
+class Telephone extends Phone{
+	private String when;
+	
+	Telephone(String w) {
+		super();
+		this.when = w;
+	}
+	
+	void autoAnswering() {
+		
+	}
+}
+
+public class Ex02 {
+
+}

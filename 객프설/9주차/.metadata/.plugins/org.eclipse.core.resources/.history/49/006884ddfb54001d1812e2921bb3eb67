@@ -1,0 +1,21 @@
+package Ex;
+
+class Rectangle {
+	int width, height;
+	
+	public Rectangle(int width, int height) {
+		this.width = width;
+		this.height = height;
+	}
+}
+
+class ColorRectangle extends Rectangle {
+	
+}
+
+public class RectangleTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

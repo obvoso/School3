@@ -1,0 +1,11 @@
+package ch04.copy;
+
+public class Grade {
+	public static void main(String[] args) {
+		printGrade(96);
+		printGrade(86);
+		printGrade(70);
+		printGrade(55);
+	}
+
+}

@@ -1,0 +1,32 @@
+package Succession;
+
+class Employee1 {
+	public int baseSalary = 3000000;
+	
+	int getSalary() {
+		return baseSalary;
+	}
+}
+
+class Manager extends Employee1 {
+	
+	@Override
+	int getSalary() {
+		return (baseSalary + 2000000);
+	}
+}
+class Programmer extends Employee1 {
+	
+	@Override
+	int getSalary() {
+		return (baseSalary + 3000000);
+	}
+}
+
+
+public class Test {
+	public static void main(String[] args) {
+		
+	}
+
+}

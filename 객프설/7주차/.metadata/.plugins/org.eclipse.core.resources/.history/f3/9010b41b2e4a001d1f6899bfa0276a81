@@ -1,0 +1,150 @@
+
+package Test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Account {
+	private int balance;
+	private int pin;
+	public int account;
+	
+	Account(int pin, int account) {
+		this.balance = 0;
+		this.pin = pin;
+		this.account = account;
+	}
+	
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public int getPin() {
+		return pin;
+	}
+
+	public void setPin(int pin) {
+		this.pin = pin;
+	}
+
+	public void withdraw(int n) {
+		setBalance(getBalance() - n);
+	}
+	public void deposit(int n) {
+		setBalance(getBalance() + n);
+	}
+	
+	public void cashDeposit(int n) {
+		deposit(n);
+		this.printBalance();
+	}
+	
+	public void cashWithdraw(int n) {
+		withdraw(n);
+		this.printBalance();
+	}
+	public void cashTransfer(ArrayList<Account> aArr, int tAccount, int n) {
+		Account transferAccount = FindAccount.findAccount(aArr, tAccount);
+		this.cashWithdraw(n);
+		transferAccount.cashDeposit(n);
+		this.printBalance();
+		transferAccount.printBalance();
+	}
+	public void printBalance() {
+		System.out.println("현재 잔액은 " + getBalance() + "입니다.");
+	}
+}
+
+class Print {
+	
+	Print(){
+	}
+	
+	static void printMenu() {
+		System.out.println("1. 현금 입금");
+		System.out.println("2. 현금 인출");
+		System.out.println("3. 계좌 이체");
+		System.out.println("4. 종료");
+		System.out.print("번호를 선택하세요 : ");
+	}
+}
+
+class FindAccount {
+	
+	FindAccount() {
+	}
+	
+	static Account findAccountPin(ArrayList<Account> aArr, int pinScan) {
+		for(Account aTmp : aArr)
+			if (aTmp.getPin() == pinScan)
+				return aTmp;
+		return null;
+	}
+	static Account findAccount(ArrayList<Account> aArr, int accountScan) {
+		for(Account aTmp : aArr)
+			if (aTmp.account == accountScan)
+				return aTmp;
+		return null;
+	}
+}
+
+public class Ex08 {
+	public static void main(String[] args) {
+		
+		ArrayList<Account> aArr = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		Account ac;
+		
+		int	n = 0;
+		int tmp;
+		int	pinScan;
+
+		aArr.add(new Account(1234, 11111));
+		aArr.add(new Account(4321, 11011));
+		
+		while (true) {
+			System.out.print("PIN을 입력하시오  : ");
+			pinScan = sc.nextInt();
+			ac = FindAccount.findAccountPin(aArr, pinScan);
+			if (ac == null)
+			{
+				System.out.println("PIN이 잘못 입력되었습니다.");
+				continue;
+			}
+			else
+				break;
+		}
+		while (n != 4) {
+			Print.printMenu();
+			n = sc.nextInt();
+			switch(n) {
+				case 1 : {
+					System.out.print("입금액  : ");
+					tmp = sc.nextInt();
+					ac.cashDeposit(tmp);
+					break;
+				}
+				case 2 : {
+					System.out.print("인출액  : ");
+					tmp = sc.nextInt();
+					ac.cashWithdraw(tmp);
+					break;
+				}
+				case 3 : {
+					System.out.print("이체액 : ");
+					tmp = sc.nextInt();
+					System.out.print("이체 계좌 번호 : ");
+					int tAccount = sc.nextInt();
+					ac.cashTransfer(aArr, tAccount, tmp);
+				}
+				case 4 : break ;
+				default : System.out.println("다시 입력하세요!!!!!!"); break;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,28 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Word {
+	
+	String eng;
+	String kor;
+	
+	Word(String e, String k) {
+		eng = e;
+		kor = k;
+	}
+}
+
+public class Ex07 {
+	public static void main(String[] args) {
+		ArrayList<Word> dic = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		
+		dic.add(new Word("house", "집"));
+		dic.add(new Word("horse", "말"));
+		dic.add(new Word("honey", "꿀"));
+		
+	}
+
+}

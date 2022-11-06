@@ -1,0 +1,12 @@
+package Succession;
+
+class Base{
+	System.out.println("Base()생성자");
+}
+
+public class Teset {
+	public static void main(String[] args) {
+		
+	}
+
+}

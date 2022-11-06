@@ -1,0 +1,21 @@
+package Extends;
+
+abstract class Shape2 {
+	int x, y;
+	public void translate(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	public abstract void draw();
+}
+
+class Rectangle2 extends Shape2 {
+	int width, height;
+	public void draw() {
+		System.out.println("사각형 그리기 메소드");
+	}
+}
+
+public class AbstractShape {
+
+}

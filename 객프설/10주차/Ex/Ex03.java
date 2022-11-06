@@ -1,0 +1,46 @@
+package Ex;
+
+class Vehicle {
+	
+	String color;
+	int speed;
+	
+	public Vehicle(String c, int s) {
+		color = c;
+		speed = s;
+	}
+	
+	void show() {
+		System.out.println("운송수단 색상 : " + color);
+		System.out.println("운송수단 속도 : " + speed);
+	}
+}
+
+class Car extends Vehicle {
+	int displacement;
+	int gears;
+	
+	public Car(String c, int s, int d, int g) {
+		super(c, s);
+		displacement = d;
+		gears = g;
+	}
+	
+	@Override
+	void show() {
+		System.out.println("자동차 색상 : " + color);
+		System.out.println("자동차 속도 : " + speed);
+		System.out.println("자동차 배기량 : " + displacement);
+		System.out.println("자동차 기어 단수 : " + gears);
+	}
+}
+
+public class Ex03 {
+	public static void main(String[] args) {
+		Car c = new Car("파랑", 200, 1000, 5);
+		c.show();
+		System.out.println();
+		Vehicle v = c;
+		v.show();
+	}
+}

@@ -1,0 +1,29 @@
+package Test;
+
+class Car{
+	
+	private String model;
+	private String make;
+	static int numberOfCars = 0;
+	
+	Car()
+	{
+		this.model = null;
+		this.make = null;
+		++numberOfCars;
+	}
+	Car(String model, String make) {
+		super();
+		this.model = model;
+		this.make = make;
+		++numberOfCars;
+	}
+	
+	
+}
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,17 @@
+package Test;
+
+class Circle {
+	
+	int radius;
+	
+	Circle(){
+		radius = (int)Math.random() * 100;
+	}
+}
+
+public class Ex05 {
+	public static void main(String[] args) {
+		Circle[] cArr = new Circle[3];
+	}
+
+}

@@ -1,0 +1,122 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Account {
+	private int balance;
+	private int pin;
+	public int account;
+	
+	Account(int pin, int account) {
+		this.balance = 0;
+		this.pin = pin;
+		this.account = account;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public int getPin() {
+		return pin;
+	}
+
+	public void setPin(int pin) {
+		this.pin = pin;
+	}
+	
+	public void withdraw(int n) {
+		setBalance(getBalance() - n);
+	}
+	public void deposit(int n) {
+		setBalance(getBalance() + n);
+	}
+	
+	public void cashDeposit(int n) {
+		deposit(n);
+	}
+	
+	public void cashWithdraw(int n) {
+		withdraw(n);
+	}
+	public void cashTransfer(int n, )
+	
+}
+
+static class Print {
+	
+	Print(){
+	}
+	
+	static void printMenu() {
+		System.out.println("1. 현금 입금");
+		System.out.println("2. 현금 인출");
+		System.out.println("3. 계좌 이체");
+		System.out.println("4. 종료");
+		System.out.print("번호를 선택하세요 : ");
+	}
+}
+
+static class FindAccount {
+	
+	FindAccount() {
+	}
+	
+	static Account retAccount(ArrayList<Account> aArr, int pinScan) {
+		for(Account aTmp : aArr)
+			if (aTmp.getPin() == pinScan)
+				return aTmp;
+		return null;
+	}
+}
+
+public class Ex08 {
+	public static void main(String[] args) {
+		
+		ArrayList<Account> aArr = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		
+		int	n = 0;
+		int tmp;
+		int	pinScan;
+
+		
+		aArr.add(new Account(1234, 11111));
+		aArr.add(new Account(4321, 11011));
+		
+		while (n != 4) {
+			System.out.print("PIN을 입력하시오  : ");
+			pinScan = sc.nextInt();
+			Account ac = FindAccount.retAccount(aArr, pinScan);
+			if (ac.equals(null))
+			{
+				System.out.println("PIN이 잘못 입력되었습니다.");
+				continue;
+			}
+			Print.printMenu();
+			n = sc.nextInt();
+			switch(n) {
+				case 1 : {
+					System.out.print("입금액  : ");
+					tmp = sc.nextInt();
+					ac.cashDeposit(tmp);
+					break;
+				}
+				case 2 : {
+					System.out.print("인출액  : ");
+					tmp = sc.nextInt();
+					ac.cashWithdraw(tmp);
+					break;
+				}
+			}
+			
+			
+		}
+		
+	}
+}

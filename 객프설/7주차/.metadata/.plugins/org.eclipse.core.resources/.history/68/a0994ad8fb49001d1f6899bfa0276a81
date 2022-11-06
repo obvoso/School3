@@ -1,0 +1,61 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Contacts {
+	
+	String name;
+	String tel;
+	String email;
+	static int count = 0;
+	
+	Contacts(){
+		name = null;
+		tel = null;
+		email = null;
+		++count;
+	}
+	
+	Contacts(String n, String t, String e) {
+		super();
+		this.name = n;
+		this.tel = t;
+		this.email = e;
+		++count;
+	}
+	static int searchContacts(Contacts[] C, String n) {
+		
+		for(int i = 0; i < count; i++) {
+			if (C[i].name == n)
+				return (i);
+		}
+		return (count);
+	}
+	
+}
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		String name;
+		String tel;
+		String email;
+		
+		ArrayList<Contacts> cArr = new ArrayList<>();
+		
+		for (int i = 0; i < 100; i++) {
+			System.out.print("이름을 입력하세요 : ");
+			name = sc.nextLine();
+			if (name.equals("-1"))
+				break;
+			System.out.print("전화번호를 입력하세요 : ");
+			tel= sc.nextLine();
+			System.out.print("이메일을 입력하세요 : ");
+			email = sc.nextLine();
+			Contacts c = new Contacts(name, tel, email);
+			cArr.add(c);
+		}
+	}
+}

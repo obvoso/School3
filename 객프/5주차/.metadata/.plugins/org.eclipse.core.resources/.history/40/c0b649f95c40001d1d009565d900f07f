@@ -1,0 +1,11 @@
+package ch04.copy;
+
+public class TrafficLight {
+	public static void main(String[] args) {
+		ligth("RED");
+		ligth("YELLOW");
+		ligth("GREEN");
+		ligth("BLUE");
+	}
+
+}

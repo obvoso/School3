@@ -1,0 +1,14 @@
+package Test;
+
+class Circle {
+	
+	int radius;
+	
+	Circle(){
+		radius = Math.random() * 100;
+	}
+}
+
+public class Ex05 {
+
+}

@@ -1,0 +1,56 @@
+package Test;
+
+class BankAccount{
+	
+	private int balance;
+	
+	BankAccount() {
+		this.balance = 0;
+	}
+	
+	BankAccount(int balance) {
+		super();
+		this.balance = balance;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [balance=" + balance + "]";
+	}
+	
+	private void deposit(int n) {
+		this.setBalance(this.getBalance() + n);
+	}
+	
+	private void withdraw(int n) {
+		this.setBalance(this.getBalance() - n);
+	}
+	
+	public void transfer(int n, BankAccount b1) {
+
+		this.withdraw(n);
+		b1.deposit(n);
+		System.out.println("transfer(" + n + ") 호출 후");
+	}
+}
+
+public class Ex01 {
+	public static void main(String[] args) {
+		BankAccount a1 = new BankAccount(10000);
+		BankAccount a2 = new BankAccount(0);
+		System.out.println("a1 :   " + a1);
+		System.out.println("a2 :   " + a2 + "\n");
+		a1.transfer(1000, a2);
+		System.out.println("a1 :   " + a1);
+		System.out.println("a2 :   " + a2 + "\n");
+	}
+
+}

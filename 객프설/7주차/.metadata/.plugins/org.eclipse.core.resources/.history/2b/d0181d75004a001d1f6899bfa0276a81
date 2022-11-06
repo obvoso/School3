@@ -1,0 +1,45 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Word {
+	
+	String eng;
+	String kor;
+	
+	Word(String e, String k) {
+		eng = e;
+		kor = k;
+	}
+}
+
+public class Ex07 {
+	public static void main(String[] args) {
+		ArrayList<Word> dic = new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		String searchEng = "a";
+		int flag = 0;
+		
+		dic.add(new Word("house", "집"));
+		dic.add(new Word("horse", "말"));
+		dic.add(new Word("honey", "꿀"));
+		
+		while (!searchEng.equals("q")) {
+			flag = 0;
+			System.out.print("검색할 단어를 입력하시오. (종료 q) ");
+			searchEng = sc.nextLine();
+			for(Word d : dic) {
+				if (d.eng.equals(searchEng)) {
+					System.out.println(d.eng + " -> " + d.kor);
+					flag = 1;
+					break;
+				}
+			}
+			if (flag == 0) {
+				System.out.println("사전에 없는 단어입니다!");
+				continue;
+			}
+		}
+	}
+}

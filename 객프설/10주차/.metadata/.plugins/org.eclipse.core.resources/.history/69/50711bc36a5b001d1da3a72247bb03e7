@@ -1,0 +1,34 @@
+package Ex;
+
+/* 수업시간에 교수님께 p.name을 출력했을 때, 
+ * 어떻게 "나는 심청의 아버지인 심학규이다." 가 
+ * 출력이 되는지에 대한 질문을 드렸었는데, 
+ * 객체를 하나 더 만든 이 코드로 제출하라 하셔서 제출합니다. */
+
+class Parent {
+	String name = "심학규";
+	
+	void print() {
+		System.out.println("나는 심청의 아버지인 심학규이다.");
+	}
+}
+
+class Child extends Parent{
+//	String name = "심청";
+	
+	super.name = "청";
+	@Override
+	void print() {
+		System.out.println("나는 심학규의 딸 심청이다.");
+	}
+}
+
+public class Ex01 {
+	public static void main(String[] args) {
+		Parent p = new Child();
+		Parent p1 = new Parent();
+		System.out.println(p.name);
+		p1.print();
+		p.print();
+	}
+}

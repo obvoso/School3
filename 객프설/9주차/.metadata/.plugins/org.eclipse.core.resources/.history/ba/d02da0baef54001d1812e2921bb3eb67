@@ -1,0 +1,15 @@
+package Succession;
+
+class Person{
+	private String regnumber;
+	private double weight;
+	protected int age;
+	String name;
+}
+
+public class SudentTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

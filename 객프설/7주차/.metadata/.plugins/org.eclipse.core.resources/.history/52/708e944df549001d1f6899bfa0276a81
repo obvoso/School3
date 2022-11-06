@@ -1,0 +1,14 @@
+package Test;
+
+class Car{
+	
+	String model;
+	String make;
+	static int numberOfCars = 0;
+}
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+	}
+}

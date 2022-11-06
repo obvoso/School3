@@ -1,0 +1,21 @@
+package Test;
+
+class Car{
+	
+	private String model;
+	private String make;
+	static int numberOfCars = 0;
+	
+	Car()
+	{
+		this.model = null;
+		this.make = null;
+		++numberOfCars;
+	}
+}
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+	}
+}

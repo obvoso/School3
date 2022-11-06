@@ -1,0 +1,46 @@
+package Test;
+
+import java.util.ArrayList;
+
+class Contacts {
+	
+	String name;
+	String tel;
+	String email;
+	static int count = 0;
+	
+	Contacts(){
+		name = null;
+		tel = null;
+		email = null;
+		++count;
+	}
+	
+	Contacts(String n, String t, String e) {
+		super();
+		this.name = n;
+		this.tel = t;
+		this.email = e;
+		++count;
+	}
+	static int searchContacts(Contacts[] C, String n) {
+		
+		for(int i = 0; i < count; i++) {
+			if (C[i].name == n)
+				return (i);
+		}
+		return (count);
+	}
+	
+}
+
+public class Ex06 {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Contacts> cArr = new ArrayList<>();
+		for (int i = 0; i < 100; i++) {
+			
+		}
+	}
+}

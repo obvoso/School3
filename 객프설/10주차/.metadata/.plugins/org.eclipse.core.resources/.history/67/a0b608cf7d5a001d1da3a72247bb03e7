@@ -1,0 +1,22 @@
+package Ex;
+
+class Phone {
+	protected String owner;
+	
+	Phone(String o) {
+		this.owner = o;
+	}
+	void talk() {
+		
+	}
+}
+
+class Telephone {
+	private String when;
+	
+	Telephone(String w)
+}
+
+public class Ex02 {
+
+}

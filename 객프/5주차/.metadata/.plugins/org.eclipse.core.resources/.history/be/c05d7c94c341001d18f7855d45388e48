@@ -1,0 +1,13 @@
+package Assignment;
+
+public class Lab2 {
+	
+	public static float getKcal(int n) {
+		
+	}
+	
+	public static void main(String args[]) {
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package Succession;
+
+class Person2 {
+	String name;
+
+	public Person2() {
+		
+	}
+	
+	public Person2(String name) {
+		super();
+		this.name = name;
+	}
+	
+	
+}
+
+public class EmployeeTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

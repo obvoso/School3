@@ -1,0 +1,42 @@
+package Ex;
+
+class Vehicle {
+	
+	String color;
+	int speed;
+	
+	public Vehicle(String c, int s) {
+		color = c;
+		speed = s;
+	}
+	
+	void show() {
+		
+	}
+}
+
+class Car extends Vehicle {
+	int displacement;
+	int gears;
+	
+	public Car(String c, int s, int d, int g) {
+		super(c, s);
+		displacement = d;
+		gears = g;
+	}
+	
+	void show() {
+		
+	}
+}
+
+public class Ex03 {
+	public static void main(String[] args) {
+		Car c = new Car("파랑", 200, 1000, 5);
+		c.show();
+		System.out.println();
+		Vehicle v = c;
+		v.show();
+	}
+
+}
