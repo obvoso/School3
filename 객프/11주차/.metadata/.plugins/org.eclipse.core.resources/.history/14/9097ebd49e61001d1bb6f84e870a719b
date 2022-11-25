@@ -1,0 +1,28 @@
+package Ex;
+
+public class WebtoonTest {
+	public static void main(String[] args) {
+		Webtoon l = new Webtoon("나 혼자만 레벨업업", "판타지", "추공님");
+		Webtoon s = new Webtoon("스위트 집", "스릴러", "칸비님");
+		Webtoon i = new Webtoon("이태원 클래식", "드라마", "광진님");
+
+		Webtoon[] webtoons = {l, s, i};
+		for(int i = 0; i < webtoons.lengthl i++) {
+			System.out.println(webtoon[i].toStr());
+		}
+		System.out.printf("웹툰 객체의 총 수 : %d", Webtoon.getCount());
+	}
+}
+
+class Webtoon {
+	private String t;
+	private String g;
+	private String a;
+	private static int cnt = 0;
+	
+	Webtoon(Stringt, String g, String a) {
+		this.t = t;
+		this.g = g;
+		this.a = a;
+	}
+}

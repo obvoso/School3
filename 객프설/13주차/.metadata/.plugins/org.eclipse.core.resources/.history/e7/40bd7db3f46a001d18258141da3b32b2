@@ -1,0 +1,13 @@
+import java.util.Vector;
+
+public class VectorExample1 {
+
+	public static void main(String[] args) {
+		Vector<String> vec = new Vector<String>(2);
+		vec.add("Apple");
+		vec.add("Orange");
+		vec.add("Mango");
+
+	}
+
+}

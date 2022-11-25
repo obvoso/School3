@@ -1,0 +1,25 @@
+package Ex;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class SimpleLotto {
+	public static void main(String[] args) {
+		ArrayList<Integer> arr = new ArrayList<>();
+		for (int i = 1; i <= 45; i++) {
+			arr.add(i);
+		}
+		
+		
+		Collections.shuffle(arr);
+		int[] lottoNumArr = new int[6];
+		for (int i = 0; i < 6; i++) {
+			lottoNumArr[i] = arr.remove(0);
+		}
+		
+		String str = Arrays.toString(lottoNumArr);
+		System.out.printf("자동 생성 로또 번호 : %s", str);
+	}
+
+}

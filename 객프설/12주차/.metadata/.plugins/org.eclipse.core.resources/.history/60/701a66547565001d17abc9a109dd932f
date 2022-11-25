@@ -1,0 +1,26 @@
+package Wrapper;
+
+public class WrapperDemo {
+	public static void main(String[] arags) {
+		Integer bi1 = new Integer(10); //인티저 타입의 객체를 생성
+		
+		int i1 = bi1.intValue(); //인티저 타입을 인트 타입으로 변환
+		
+		double d = bi1.doubleValue();//인터저 타입을 더블 타입으로 변환
+		
+		Integer bi2 = 20; // 자동박싱
+		
+		int i2 = bi2 + 20; //자동 언박싱
+		
+		String s1 = Double.toString(3.14);
+		
+		Float pi = Float.parseFloat("3.14");
+		
+		Integer bi3 = Integer.valueOf("11", 16);
+		//16진수 숫자 문자열을 10진수 인티저타입으로 
+		
+		
+		System.out.println(bi3);
+	}
+
+}

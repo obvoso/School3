@@ -1,0 +1,22 @@
+package Ex;
+
+import java.util.Random;
+
+class Dice {
+	private int n;
+	private static Random r = new Random();
+	
+	Dice(int n) {
+		this.n = n;
+	}
+	public int roll() {
+		return r.nextInt(s) + 1;
+	}
+}
+
+public class DiceTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

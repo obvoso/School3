@@ -1,0 +1,27 @@
+package Ex;
+
+import java.util.Random;
+
+class Dice {
+	private int n;
+	private static Random r = new Random();
+	
+	Dice(int n) {
+		this.n = n;
+	}
+	public int roll() {
+		return r.nextInt(n) + 1;
+	}
+}
+
+public class DiceTest {
+	public static void main(String[] args) {
+		Dice a = new Dice(6);
+		Dice b = new Dice(6);
+		int a1 = a.roll();
+		int b1 = b.roll();
+		int sum = a1 + b1;
+		System.out.printf("두 주사위 A(%d)와 B(%d)의 합 : %d\n", a1, b1, sum);
+	}
+
+}

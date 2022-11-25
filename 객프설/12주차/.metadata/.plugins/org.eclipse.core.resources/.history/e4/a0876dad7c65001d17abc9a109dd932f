@@ -1,0 +1,14 @@
+package Wrapper;
+
+import java.util.Calendar;
+
+public class CalendarTest {
+
+	public static void main(String[] args) {
+		Calendar d = Calendar.getInstance();
+		System.out.println(d);
+		System.out.println(d.get(Calendar.YEAR) + "년");
+
+	}
+
+}

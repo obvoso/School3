@@ -1,0 +1,10 @@
+package Ex;
+
+public class CartTest {
+	public static void main(String[] args) {
+		Item shirt = new Item("스프라이트 셔츠", 49900);
+		Item pants = new Item("슬림 면바지", 58900);
+		Item sneakers = new Item("스니커즈", 46900);
+	}
+
+}

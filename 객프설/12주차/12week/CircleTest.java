@@ -1,0 +1,25 @@
+package Abstract;
+
+class Circle
+{
+	int radius;
+	public Circle(int radius) {
+		this.radius = radius;
+	}
+	@Override
+	public String toString() {
+		return "Circle [radius=" + radius + "]";
+	}
+}
+
+public class CircleTest {
+
+	public static void main(String[] args) {
+		Circle obj = new Circle(10);
+		System.out.println(obj);
+		//Circle 클래스 정의에 무관하게 21행, 22행은 출력됨
+		System.out.println("obj is of type " + obj.getClass().getName()); //패키지명.객채의 클래스
+		System.out.println("obj의 해쉬코드 = " + obj.hashCode());
+	}
+
+}

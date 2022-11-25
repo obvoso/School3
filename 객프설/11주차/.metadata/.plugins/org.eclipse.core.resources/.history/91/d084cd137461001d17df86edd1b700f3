@@ -1,0 +1,21 @@
+package Ex;
+
+interface Getinfo {
+	double getValue();
+}
+
+class Student implements Getinfo {
+	double getValue() {
+		
+	}
+	double average(Measurable[] objects) {
+		
+	}
+}
+
+public class Ex03 {
+	public static void main(String[] args) {
+		
+	}
+
+}

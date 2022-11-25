@@ -1,0 +1,20 @@
+package Wrapper;
+
+import java.util.StringTokenizer;
+
+public class StringTokenizerDemo {
+
+	public static void main(String[] args) {
+		String s = "of the people, by the people, for the people";
+		
+		StringTokenizer st = new StringTolenizer(s);
+		
+		System.out.println(st.countTokens());
+		
+		while (st.hasMoreTokens()) {
+			System.out.print("[" + st.nextToken() + "]");
+		}
+
+	}
+
+}

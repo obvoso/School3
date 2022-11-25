@@ -1,0 +1,53 @@
+package Ex;
+
+import java.util.ArrayList;
+
+interface Getinfo {
+	double getValue();
+}
+
+class Student implements Getinfo {
+	private double score;
+	
+	Student() {
+		score = 0;
+	}
+	
+	Student(double s) {
+		score = s;
+	}
+	
+	public double getScore() {
+		return score;
+	}
+	
+	public void setScore(double score) {
+		this.score = score;
+	}
+	
+	public double getValue() {
+		return getScore();
+	}
+	
+	static double average(Getinfo[] objects) {
+		double sum = 0;
+		for(Getinfo tmp : objects) {
+			sum += tmp.getValue();
+		}
+		return sum;
+	}
+}
+
+public class Ex03 {
+	
+	public static void main(String[] args) {
+		Getinfo[] sArr = Getinfo[5];
+		sArr.add(new Student(100));
+		sArr.add(new Student());
+		sArr.add(new Student(90));
+		sArr.add(new Student(80));
+		
+		sArr.average(sArr)
+	}
+
+}

@@ -1,0 +1,16 @@
+package Ex;
+
+interface Drawable {
+	void draw();
+}
+
+class Duck implements Animal, Drawable {
+	walk
+}
+
+public class DuckTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

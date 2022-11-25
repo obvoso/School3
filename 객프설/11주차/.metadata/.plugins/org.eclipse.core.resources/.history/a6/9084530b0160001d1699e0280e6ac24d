@@ -1,0 +1,53 @@
+package Ex;
+
+public class MyQueue implements Queue {
+	int[] QArr;
+	int front;
+	int back;
+	int max;
+	int itemCnt;
+	
+	MyQueue(int size) {
+		QArr = new int[size];
+		front = -1;
+		back = -1;	
+		max = size;
+		itemCnt = 0;
+	}
+	public int dequeue() {
+		if (isEmpty() == true)
+			return 0;
+		--itemCnt;
+		front = front + 1 % max;
+		return (QArr[front - 1]);
+	}
+	
+	public void enqueue(int value) {
+		if (max - back == front)
+			return ;
+		++itemCnt;
+		QArr[++back % max] = value;
+		if (front == -1)
+			front++;
+	}
+	
+	public boolean isEmpty() {
+		if (itemCnt == 0)
+			return true;
+		return false;
+	}
+	void display() {
+		if (isEmpty() == true)
+			System.out.println("Queue is Empty");
+		else {
+			System.out.print("[");
+			for (int i = front + itemCnt; i < itemCnt; i++) {
+				if (itemCnt == max)
+					i %= max;
+				System.out.println(i);
+				System.out.print(QArr[i] + " ");
+			}
+			System.out.print("]");
+		}
+	}
+}

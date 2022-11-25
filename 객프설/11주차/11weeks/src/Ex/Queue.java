@@ -1,0 +1,7 @@
+package Ex;
+
+public interface Queue {
+	int dequeue();
+	void enqueue(int value);
+	boolean isEmpty();
+}

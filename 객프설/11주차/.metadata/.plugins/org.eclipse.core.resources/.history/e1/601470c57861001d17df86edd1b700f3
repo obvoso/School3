@@ -1,0 +1,33 @@
+package Ex;
+
+interface Human {
+	void eat();
+}
+
+class Worker implements Human {
+
+	@Override
+	public void eat() {
+		System.out.println("빵을 먹습니다.");
+	}
+	void echo() {
+		System.out.println("야호!!!");
+	}
+}
+
+class Student implements Human {
+
+	@Override
+	public void eat() {
+		System.out.println("빵을 먹습니다.");
+	}
+	void echo() {
+		System.out.println("야호!!!");
+	}
+}
+
+public class Ex04 {
+	public static void main(String[] args) {
+		
+	}
+}

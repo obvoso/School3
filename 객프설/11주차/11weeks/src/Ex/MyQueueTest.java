@@ -1,0 +1,26 @@
+package Ex;
+
+public class MyQueueTest {
+	public static void main(String[] args) {
+		MyQueue q = new MyQueue(5);
+		q.display();
+		
+		q.enqueue(10);
+		q.display();
+		q.enqueue(20);
+		q.display();
+		q.enqueue(30);
+		q.display();
+		q.enqueue(40);
+		q.display();
+		
+		q.dequeue();
+		q.display();
+		q.dequeue();
+		q.display();
+		q.dequeue();
+		q.display();
+		q.dequeue();
+		q.display();
+		}
+}

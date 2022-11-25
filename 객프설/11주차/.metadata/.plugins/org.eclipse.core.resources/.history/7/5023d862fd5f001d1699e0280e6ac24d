@@ -1,0 +1,8 @@
+package Ex;
+
+public class MyQueueTest {
+	public static void main(String[] args) {
+		MyQueue q = new MyQueue(5);
+		
+	}
+}

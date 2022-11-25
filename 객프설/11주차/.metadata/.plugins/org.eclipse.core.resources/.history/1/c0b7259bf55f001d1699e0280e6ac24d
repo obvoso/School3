@@ -1,0 +1,6 @@
+package Interface;
+
+public class AutoCarTest {
+	public static void main(String[] args) {
+
+}

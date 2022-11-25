@@ -1,0 +1,11 @@
+package Interface;
+
+interface RemoteControl1 {
+	void turnOn();
+	void turnOff();
+}
+
+public class AnonymousClassTest {
+	
+
+}

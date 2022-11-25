@@ -1,0 +1,10 @@
+package Wrapper;
+
+public class TokenTest {
+	public static void main(String[] args) {
+		String[] t = "I am a boy".split(" ");
+		for(String tmp : t) {
+			System.out.println(tmp);
+		}
+	}
+}

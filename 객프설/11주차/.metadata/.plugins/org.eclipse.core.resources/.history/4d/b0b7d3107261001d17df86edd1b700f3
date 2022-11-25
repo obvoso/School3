@@ -1,0 +1,22 @@
+package Ex;
+
+interface Animal {
+	void walk();
+	void fly();
+	void sing();
+}
+
+interface Drawable {
+	void draw();
+}
+
+class Duck implements Animal, Drawable {
+	
+}
+
+public class DuckTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

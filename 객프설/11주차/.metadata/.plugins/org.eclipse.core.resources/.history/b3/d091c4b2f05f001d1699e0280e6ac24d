@@ -1,0 +1,13 @@
+package Interface;
+
+interface MyInterface {
+	public void myMethod1();
+	
+	default void myMethod2() {
+		System.out.println("myMethod2()");
+	}
+}
+
+public class DefaultMethodTest {
+
+}
